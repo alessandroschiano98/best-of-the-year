@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Best movies</title>
+
+    <!-- Bootstrap CSS -->
+    <th:block th:replace="~{fragments/stylesheets :: bootstrap}"></th:block>
+
+</head>
+<body>
+
+    <header>
+        <nav th:replace="~{fragments/navbar :: navbar('Best movies')}" />
+    </header>
+
+    <main class="container">
+        <section class="row justify-content-center">
+            <div class="col-12 text-center mb-3">
+                <h1>Best movies of the year</h1>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+                <ul class="list-group w-25">
+                    <li class="list-group-item text-center" th:each="movie : ${movies}" th:object="${movie}" th:data-custom-id="*{id}">
+                        <a th:href="@{/movies/{id}(id=*{id})}">
+                            [[*{title}]]
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+</html>

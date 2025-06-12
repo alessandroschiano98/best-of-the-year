@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single song page</title>
+
+    <th:block th:replace="~{fragments/stylesheets :: bootstrap}"></th:block>
+
+</head>
+<body>
+        
+    <header>
+        <nav th:replace="~{fragments/navbar :: navbar('Best movies')}" />
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12">       
+                <h1 th:if="${isFound}">Single song with title [[${song.getTitle()}]]</h1>
+                <h1 th:unless="${isFound}">There is no song with this id</h1>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
