@@ -51,7 +51,12 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<!-- !  WEBJARS  !  -->
+<dependency>
+<groupId>org.webjars</groupId>
+<artifactId>bootstrap</artifactId>
+<version>5.3.7</version>
+</dependency>
 	<build>
 		<plugins>
 			<plugin>
