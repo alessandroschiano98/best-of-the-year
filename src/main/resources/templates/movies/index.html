@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ! Bootstrap CSS ! -->
-<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.7/css/bootstrap.min.css}"/>
+    <!-- ! Bootstrap CSS -->
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.6/css/bootstrap.min.css}" />
 
     <title>Best movies</title>
 
@@ -13,6 +13,7 @@
     <th:block th:replace="~{fragments/stylesheets :: bootstrap}"></th:block>
 
 </head>
+
 <body>
 
     <header>
@@ -26,7 +27,8 @@
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <ul class="list-group w-25">
-                    <li class="list-group-item text-center" th:each="movie : ${movies}" th:object="${movie}" th:data-custom-id="*{id}">
+                    <li class="list-group-item text-center" th:each="movie : ${movies}" th:object="${movie}"
+                        th:data-custom-id="*{id}">
                         <a th:href="@{/movies/{id}(id=*{id})}">
                             [[*{title}]]
                         </a>
@@ -38,4 +40,5 @@
 
 
 </body>
+
 </html>

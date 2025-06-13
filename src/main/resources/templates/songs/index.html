@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- ! Bootstrap CSS ! -->
-<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.7/css/bootstrap.min.css}"/>
+    <!-- ! Bootstrap CSS ! -->
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.6/css/bootstrap.min.css}" />
     <title>Best songs</title>
 
     <th:block th:replace="~{fragments/stylesheets :: bootstrap}"></th:block>
 </head>
+
 <body>
-    
+
     <header>
         <nav th:replace="~{fragments/navbar :: navbar('Best movies')}" />
     </header>
@@ -34,4 +35,5 @@
     </main>
 
 </body>
+
 </html>
